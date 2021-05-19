@@ -1,5 +1,6 @@
 <template>
-  <div class="flex items-center justify-center space-x-4">
+  <!--TODO fix input size -->
+  <div class="flex items-center w-full space-x-4">
     <label>{{ label }}</label>
     <input
       type="text"

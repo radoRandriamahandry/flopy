@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-5">
+  <div class="flex mt-5">
     <component :is="selectedComponent" :label="label"></component>
   </div>
 </template>

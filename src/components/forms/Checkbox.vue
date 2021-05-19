@@ -1,5 +1,7 @@
 <template>
-  <input type="checkbox" /><label>{{ label }}</label>
+  <div class="space-x-4">
+    <input type="checkbox" /><label>{{ label }}</label>
+  </div>
 </template>
 
 <script>
