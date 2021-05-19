@@ -36,8 +36,9 @@
 </template>
 
 <script>
-import { ref } from "vue"
+// import { ref } from "vue"
 import ComponentsCreator from "../components/ComponentsCreator.vue"
+import state from "../store/state.js"
 
 export default {
   components: {
@@ -45,7 +46,8 @@ export default {
   },
 
   setup() {
-    const components = ref([])
+    // const components = ref([])
+    const { components } = state()
 
     const createComponent = (value) => {
       const component = {
