@@ -1,11 +1,14 @@
 <template>
-  <component :is="selectedComponent" :label="label" class="mt-5"></component>
+  <div class="mt-5">
+    <component :is="selectedComponent" :label="label"></component>
+  </div>
 </template>
 
 <script>
 import { computed } from "vue"
 // import TextInput from "./forms/TextInput.vue"
 const TextInput = () => import("./forms/TextInput.vue")
+const Checkbox = () => import("./forms/Checkbox.vue")
 
 export default {
   // Props
@@ -15,11 +18,19 @@ export default {
       default: "",
       required: false,
     },
+    componentType: {
+      type: String,
+      default: "",
+      required: true,
+    },
   },
-  setup() {
+  setup(props) {
     const selectedComponent = computed(() => {
-      TextInput()
-      return "TextInput"
+      ;() => {
+        return [props.componentType]()
+      }
+
+      return props.componentType
     })
 
     return { selectedComponent }

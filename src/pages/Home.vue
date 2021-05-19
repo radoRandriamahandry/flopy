@@ -10,16 +10,28 @@
         Create your component
       </h2>
       <div v-if="components">
-        <div v-for="component in components" :key="component">
-          <ComponentsCreator label="Test label" />
+        <div v-for="component in components" :key="component.name">
+          <ComponentsCreator
+            label="Test label"
+            :component-type="component.name"
+          />
         </div>
       </div>
     </div>
-    <form class="flex justify-center mt-10" @submit.prevent="createComponent">
-      <button type="submit" class="px-4 py-2 border border-gray-400 rounded-lg">
-        Generate component
+    <div class="flex justify-center mt-10 space-x-5">
+      <button
+        class="px-4 py-2 border border-gray-400 rounded-lg"
+        @click="createComponent('TextInput')"
+      >
+        Text input
       </button>
-    </form>
+      <button
+        class="px-4 py-2 border border-gray-400 rounded-lg"
+        @click="createComponent('Checkbox')"
+      >
+        Checkbox
+      </button>
+    </div>
   </main>
 </template>
 
@@ -33,11 +45,13 @@ export default {
   },
 
   setup() {
-    const components = ref(0)
+    const components = ref([])
 
-    const createComponent = () => {
-      components.value++
-      console.log(components.value)
+    const createComponent = (value) => {
+      const component = {
+        name: value,
+      }
+      components.value.push(component)
     }
 
     return { components, createComponent }
