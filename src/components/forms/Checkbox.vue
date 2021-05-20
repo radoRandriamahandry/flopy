@@ -1,5 +1,7 @@
 <template>
+
   <input type="checkbox" /><label>{{ component.label }}</label>
+
 </template>
 
 <script>

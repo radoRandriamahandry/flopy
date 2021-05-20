@@ -1,6 +1,8 @@
 <template>
+
   <div class="mt-5">
     <component :is="selectedComponent" :component="component"></component>
+
   </div>
 </template>
 

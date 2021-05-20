@@ -1,9 +1,11 @@
 <template>
+
   <div class="w-full">
     <label class="block">{{ component.label }}</label>
     <div class="mt-1">
       <input type="text" class="" @change="handleChange" />
     </div>
+
   </div>
 </template>
 
