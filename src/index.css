@@ -23,10 +23,10 @@
   select,
   select[multiple],
   textarea {
-    @apply w-full border-gray-300 rounded-lg shadow-sm focus:border-gray-500 focus:ring-transparent;
+    @apply w-full border-gray-200 shadow-sm focus:border-gray-500 focus:ring-transparent;
   }
 
   [type="checkbox"] {
-    @apply mr-2 text-gray-500 border-gray-300 rounded focus:ring-gray-300;
+    @apply mr-2 text-gray-500 border-gray-200 focus:ring-gray-300;
   }
 }
