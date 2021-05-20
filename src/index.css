@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 @layer base {
-  body {
-    @apply text-gray-700 bg-gray-50;
+  html {
+    @apply text-gray-700 bg-blue-50;
   }
 
   /* Input forms customization */
@@ -27,6 +27,6 @@
   }
 
   [type="checkbox"] {
-    @apply mr-2 text-gray-500 border-gray-200 focus:ring-gray-300;
+    @apply mr-2 text-gray-500 border-gray-500 focus:ring-gray-300;
   }
 }

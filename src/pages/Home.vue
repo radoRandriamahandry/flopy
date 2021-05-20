@@ -19,21 +19,21 @@
     </div>
     <div class="flex justify-center mt-10 space-x-5">
       <button
-        class="px-4 py-2 border border-gray-400"
+        class="px-4 py-2 bg-white border border-gray-300"
         @click="createComponent('TextInput')"
       >
         Text input
       </button>
       <button
         type="button"
-        class="px-4 py-2 border border-gray-400 cursor-pointer"
+        class="px-4 py-2 bg-white border border-gray-300"
         @click="createComponent('Checkbox')"
       >
         Checkbox
       </button>
       <button
         type="button"
-        class="px-4 py-2 text-white bg-gray-400 cursor-pointer"
+        class="px-4 py-2 text-white bg-gray-400"
         @click="openModal"
       >
         Open dialog
