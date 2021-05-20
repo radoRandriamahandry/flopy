@@ -1,6 +1,6 @@
 <template>
   <div class="mt-5">
-    <component :is="selectedComponent" :label="label"></component>
+    <component :is="selectedComponent" :component="component"></component>
   </div>
 </template>
 
@@ -13,24 +13,20 @@ const Checkbox = () => import("./forms/Checkbox.vue")
 export default {
   // Props
   props: {
-    label: {
-      type: String,
-      default: "",
-      required: false,
-    },
-    componentType: {
-      type: String,
-      default: "",
+    component: {
+      type: Object,
       required: true,
     },
   },
   setup(props) {
+    console.log(props.component.id)
+
+    // Import and assign the component dynamically
     const selectedComponent = computed(() => {
       ;() => {
-        return [props.componentType]()
+        return [props.component.name]()
       }
-
-      return props.componentType
+      return props.component.name
     })
 
     return { selectedComponent }

@@ -6,4 +6,27 @@
   body {
     @apply text-gray-700 bg-gray-100;
   }
+
+  /* Input forms customization */
+  [type="text"],
+  [type="password"],
+  [type="email"],
+  [type="number"],
+  [type="date"],
+  [type="datetime-local"],
+  [type="month"],
+  [type="week"],
+  [type="time"],
+  [type="search"],
+  [type="tel"],
+  [type="radio"],
+  select,
+  select[multiple],
+  textarea {
+    @apply w-full border-gray-300 rounded-lg shadow-sm focus:border-gray-500 focus:ring-transparent;
+  }
+
+  [type="checkbox"] {
+    @apply mr-2 text-gray-500 border-gray-300 rounded focus:ring-gray-300;
+  }
 }

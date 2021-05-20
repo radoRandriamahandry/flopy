@@ -1,9 +1,13 @@
-const { ref } = require("@vue/reactivity")
+import { ref } from "@vue/reactivity"
+
+const components = ref([])
 
 const state = () => {
-  const components = ref([])
+  const pushComponent = (component) => {
+    components.value.push(component)
+  }
 
-  return { components }
+  return { components, pushComponent }
 }
 
 export default state

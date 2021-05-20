@@ -1,14 +1,13 @@
 <template>
-  <input type="checkbox" /><label>{{ label }}</label>
+  <input type="checkbox" /><label>{{ component.label }}</label>
 </template>
 
 <script>
 export default {
   props: {
-    label: {
-      type: String,
-      default: "",
-      required: false,
+    component: {
+      type: Object,
+      required: true,
     },
   },
 }
