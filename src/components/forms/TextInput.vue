@@ -1,23 +1,37 @@
 <template>
-  <!--TODO fix input size -->
-  <div class="flex items-center w-full space-x-4">
-    <label>{{ label }}</label>
-    <input
-      type="text"
-      class="px-2 py-1 border border-gray-200 rounded-md outline-none  focus:ring-1 ring-gray-300"
-    />
+
+  <div class="w-full">
+    <label class="block">{{ component.label }}</label>
+    <div class="mt-1">
+      <input type="text" class="" @change="handleChange" />
+    </div>
+
   </div>
 </template>
 
 <script>
 // Props : Label placeholder default-value
+import state from "../../store/state.js"
+import { test } from "../../store/test.js"
 export default {
   props: {
-    label: {
-      type: String,
-      default: "",
-      required: false,
+    component: {
+      type: Object,
+      required: true,
     },
+  },
+
+  setup(props) {
+    console.log(test)
+    const { components } = state()
+
+    const handleChange = () => {
+      console.log("some change on ", props.component.id)
+      console.log(components.value)
+      // console.log(current)
+    }
+
+    return { handleChange }
   },
 }
 </script>
